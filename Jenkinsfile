@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "docker build -t Demoapp . "
+                sh "docker build -t demoapp . "
              //   sh "docker tag nodejsapp:latest 660656678331.dkr.ecr.us-east-1.amazonaws.com/node:latest"
                 }
             }
