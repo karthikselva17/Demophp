@@ -26,6 +26,13 @@ pipeline {
                     waitForQualityGate abortPipeline: true
                 }
             }
-        }  
+        }
+        stage('Build') {
+            steps {
+                sh "docker build -t Demoapp . "
+             //   sh "docker tag nodejsapp:latest 660656678331.dkr.ecr.us-east-1.amazonaws.com/node:latest"
+                }
+            }
+   
    }
 }
