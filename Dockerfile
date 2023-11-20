@@ -1,4 +1,8 @@
-FROM php:8.2-cli
-COPY . /usr/src/myapp
-WORKDIR /usr/src/myapp
-CMD [ "php", "./index.php" ]
+FROM php:8.0-apache
+WORKDIR /var/www/html
+
+COPY index.php index.php
+COPY content/ content
+COPY includes/ includes
+COPY template/ template
+EXPOSE 80
