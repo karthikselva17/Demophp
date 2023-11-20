@@ -1,5 +1,7 @@
 pipeline {
-    agent node1
+    agent {
+        label 'node1' // Or 'any', 'none', 'docker', etc.
+    }
     stages {
         stage('SCM') {
             steps {
