@@ -8,7 +8,7 @@
 function config($key = '')
 {
     $config = [
-        'name' => 'Welcome to Simple PHP Website Marking Completed.',
+        'name' => 'Welcome to Simple PHP Website Marking Completed Done',
         'site_url' => '',
         'pretty_uri' => false,
         'nav_menu' => [
