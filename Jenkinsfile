@@ -32,14 +32,14 @@ pipeline {
         stage('Build') {
             steps {
                 sh "docker build -t demoapp . "
-                sh "docker tag demoapp:latest 660656678331.dkr.ecr.us-east-1.amazonaws.com/demo:latest"
+                sh "docker tag demoapp:latest 660656678331.dkr.ecr.us-east-1.amazonaws.com/demo:$env.BUILD_NUMBER"
                 }
             }
         stage('Push image to ECR') {
         steps {
                 script{
                         docker.withRegistry('https://660656678331.dkr.ecr.us-east-1.amazonaws.com/demo', 'ecr:us-east-1:awscredentials') {
-                       sh "docker push 660656678331.dkr.ecr.us-east-1.amazonaws.com/demo:latest"
+                       sh "docker push 660656678331.dkr.ecr.us-east-1.amazonaws.com/demo:$env.BUILD_NUMBER"
                     }
                 }
             }
