@@ -8,7 +8,7 @@
 function config($key = '')
 {
     $config = [
-        'name' => 'Welcome Bakiya',
+        'name' => 'Welcome Ranjitha',
         'site_url' => '',
         'pretty_uri' => false,
         'nav_menu' => [
