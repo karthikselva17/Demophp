@@ -3,13 +3,7 @@ pipeline {
         label 'node1' // Or 'any', 'none', 'docker', etc.
     }
     stages {
-        stage('SCM') {
-            steps {
-                // Get some code from a GitHub repository
-                git url: 'https://github.com/karthikselva17/Demophp.git', branch: 'main'
-                }          
-        }
-        stage('SonarQube Code Scan') {
+            stage('SonarQube Code Scan') {
         environment {
             scannerHome = tool 'sonar-scanner'
           }
