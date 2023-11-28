@@ -8,7 +8,7 @@
 function config($key = '')
 {
     $config = [
-        'name' => 'Simple php Website Version3',
+        'name' => 'Simple php Website Version4',
         'site_url' => '',
         'pretty_uri' => false,
         'nav_menu' => [
