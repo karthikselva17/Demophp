@@ -8,7 +8,7 @@
 function config($key = '')
 {
     $config = [
-        'name' => 'Karthik PHP Website Is Working Fine',
+        'name' => 'Demo PHP Website Is Working ',
         'site_url' => '',
         'pretty_uri' => false,
         'nav_menu' => [
